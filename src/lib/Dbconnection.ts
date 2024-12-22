@@ -1,4 +1,4 @@
-import { Db } from "mongodb";
+
 import mongoose from "mongoose";
 
 const Dbconnect = async () =>{

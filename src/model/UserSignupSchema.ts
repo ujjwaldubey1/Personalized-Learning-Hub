@@ -22,7 +22,7 @@ const UserSchema:Schema = new Schema({
         required:true,
         type:String
       },
-      Designation:{
+      designation:{
         required:true,
         type:String
       }

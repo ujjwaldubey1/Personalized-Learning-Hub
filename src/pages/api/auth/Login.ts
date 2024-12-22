@@ -1,6 +1,5 @@
-import User from "@/app/model/UserSignupSchema";
+import User from "@/model/UserSignupSchema";
 import bcrypt from "bcrypt";
-import { error } from "console";
 import jwt from "jsonwebtoken";
 
 const Login = async (req, res) =>{
@@ -17,7 +16,7 @@ const Login = async (req, res) =>{
         if(!isPasswordRight) {
           return res.status(400).json({error:"Check the password "})
         }
-        const token = jwt.Sign({id:existingUser._id}, process.env.JWT_SECRET, {expiresIn:"2h"})
+        const token = jwt.sign({id:existingUser._id}, process.env.JWT_SECRET, {expiresIn:"2h"})
 
         return res.status(200).json({message:"successfully Login",token})
 
@@ -26,3 +25,5 @@ const Login = async (req, res) =>{
         return res.status(400).json({error:"Some Internal error"})
       }
 }
+
+export default Login
