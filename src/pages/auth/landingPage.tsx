@@ -1,13 +1,11 @@
+"use client"
 import React from 'react'
-import Signup from './signup'
-import Login from './Login' 
-import Link from 'next/link'
+import NavBar from './components/NavBar'
+
 const LandingPage = () => {
   return (
-    <div>
-    
-     <Link href="/auth/Login">login</Link>
-      <Link href="/auth/signup">Get Started</Link>
+    <div className='bg-gradient-to-br from-blue-100 via-blue-200 to-teal-200 w-screen h-screen'>
+      <NavBar />
     </div>
   )
 }
